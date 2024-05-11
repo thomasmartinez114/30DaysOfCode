@@ -14,17 +14,18 @@
  *  3. INTEGER tax_percent
  */
 
-let meal_cost = 113.15
-let tip_percent = 15
-let tax_percent = 8.75
+let meal_cost = 12.0
+let tip_percent = 20
+let tax_percent = 8
 
-solve = (meal_cost, tax_percent, tip_percent) => {
+function solve(meal_cost, tip_percent, tax_percent) {
   // Write your code here
-  let tipAmount = meal_cost * (tip_percent / 100)
-  let taxAmount = meal_cost * (tax_percent / 100)
-  let finalBill = Math.floor(meal_cost + taxAmount + tipAmount)
-  console.log(`$${finalBill}`)
-  return
+  let tip = meal_cost * (tip_percent / 100)
+  // console.log(tip)
+  let tax = meal_cost * (tax_percent / 100)
+  // console.log(tax)
+  let total_cost = Math.floor(meal_cost + tip + tax)
+  console.log(total_cost)
 }
 
 solve(meal_cost, tax_percent, tip_percent)
